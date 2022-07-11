@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { CssBaseline, Grid } from "@material-ui/core";
 
-//import { getPlacesData, getWeatherData } from "./api/travelAdvisorAPI";
+import { getPlacesData, getWeatherData } from "./api/index";
 import Header from "./components/Header/Header";
 import List from "./components/List/List";
 import Map from "./components/Map/Map";
 
 const App = () => {
+  const [places, setPlaces] = useState(second);
+  useEffect(() => {
+    getPlacesData();
+  }, []);
+
   return (
     <>
       <CssBaseline />
@@ -24,3 +29,5 @@ const App = () => {
 };
 
 export default App;
+
+//53:18
