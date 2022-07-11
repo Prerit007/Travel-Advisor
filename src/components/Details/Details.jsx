@@ -15,7 +15,8 @@ import Rating from "@material-ui/lab/Rating";
 
 import useStyles from "./styles.js";
 
-const Details = () => {
+const Details = ({ place }) => {
+  const classes = useStyles();
   return <div>Details</div>;
 };
 

@@ -8,7 +8,23 @@ import mapStyles from "../../mapStyles";
 import useStyles from "./styles.js";
 
 const Map = () => {
-  return <div>Map</div>;
+  const classes = useStyles();
+  const isMobile = useMediaQuery("(min-width:600px)");
+  const coord = { lat: 100, lng: 100 };
+  return (
+    <div className={classes.mapContainer}>
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: "AIzaSyDUYXAgCS6u61GE--6iPZStp5jali0kkjc" }}
+        defaultCenter={coord}
+        center={coord}
+        defaultZoom={14}
+        margin={[50, 50, 50, 50]}
+        option={""}
+        onChange={""}
+        onChildClick={""}
+      ></GoogleMapReact>
+    </div>
+  );
 };
 
 export default Map;
